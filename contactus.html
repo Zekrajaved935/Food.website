@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+<style>
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+ #bg-image{
+   
+  /* The image used in form background */
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/033/255/791/small_2x/thai-food-som-tum-spicy-green-papaya-salad-top-view-ai-generated-photo.jpg");
+padding: 5px;
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat; 
+   background-size: cover;
+}
+
+  /* form styling */
+
+  .form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: 0;
+  font-size: 17px;
+  color: #ffffff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #0c0c0c;
+  pointer-events: none;
+  font-weight: 600;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 5px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+</style>
+ 
+ 
+<body>
+ 
+                     <!-- navbar  -->
+
+<nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+   <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+     <ul class="nav justify-content-center" >
+       <li class="nav-item ">
+         <a class="nav-link" id="nav-text" href="#" style="color: white; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">Home</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#" style="color: white; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">Menu</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#" style="color: white; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">Contact us</a>
+       </li>  
+       <li class="nav-item">
+         <a class="nav-link " href="#" style="color: white; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">About Us</a>
+       </li> 
+        
+     </ul>
+     
+   </div>  
+   <li class="nav-item">
+     <img  src="design-bbq-restaurant-bar-cafe-food-logo-removebg-preview.png" height="120px" alt="">
+  </li> 
+ </nav>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- img and Form  -->
+
+ <div class="container-fluid-sm p-5 mt-5 " id="bg-image">
+
+    <div class="row">
+     
+
+        <div class=" form col-sm-6 p-4">
+    
+                <h1 style="font-family: 'kanit'; color: rgb(122, 93, 56); text-shadow: 2px 4px 4px grey;">Contact Us</h1>
+
+                <form id="loginForm" onsubmit="validateForm()">
+
+                    <div class="form__group field">  
+                        <input type="text" id="username" name="username" class="form__field" placeholder="Enter your Name" required>
+                         <label class="form__label text-light" for="username">Username:</label>
+                    </div>
+
+                    <div class="form__group field">  
+                        <input type="text" id="email" name="email" class="form__field"placeholder="Enter your Email" required>
+                        <label class="form__label text-light" for="email">Email:</label>
+                   </div>
+
+                   <div class="form__group field">  
+                    <input type="text" id="phonenumber" name="phonenumber" class="form__field"placeholder="Enter your phonenumber" required>
+                    <label class="form__label text-light" for="phonenumber">Phone Number:</label>
+               </div>
+
+
+
+                    <div class="form__group field">  
+                        <input type="password" id="password" name="password" class="form__field" placeholder="Enter your password"required>
+                        <label class="form__label text-light" for="password">Password:</label>
+                   </div>
+                    
+                   <div class="form-group">  
+                       <label class="text-light" for="password " style="font-weight: 700;">Message:</label>
+                       <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
+                 
+               </div>
+
+                    <button type="submit" class="btn btn-C  text-light" style="background-color: #116399;"> Submit</button>
+                  </form> 
+                  
+                 
+            </div>
+       
+
+
+ </div>
+
+</div>
+ <script>
+  
+
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var phonenumber= document.getElementById('phonenumber').value;
+    
+   
+    var usernameRegex = /^[a-z]{6}$/; 
+    var passwordRegex = /^\d{10}$/;
+    var phonenumberRegex = /^\d{11}$/;
+
+    
+    if (!usernameRegex.test(username)) {
+        alert('Invalid username! Username must contain only lowercase letters, exactly 6 characters long no special characters.');
+        return false; 
+    }
+    
+   
+    if (!passwordRegex.test(password)) {
+        alert('Invalid password! Password must contain at least ten digit ');
+        return false; 
+    }
+
+    if (!phonenumberRegex.test(phonenumber)) {
+        alert('Invalid phonenumber! Phonenumber must contain at least 11 digits ');
+        return false; 
+    }
+    
+    
+    alert('Valid username, phonenumber and password!');
+    return false;
+}
+
+            
+         
+
+
+</script>
+
+
+ <!-- footer  -->
+  
+
+ <footer class="bg-dark">
+   <div class="container-fluid ">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-light text-center ">Best Food Available</h1>
+        <p class="text-light text-center text-align">Life's too short to eat bad food. 
+          Indulge in life's greatest pleasure: food. <br>
+          Good food, good mood.
+          Tasty food for every mood. <br>
+          We make [food] magic. 
+          Food is always a good idea.
+          Take a seat, grab a treat.
+          </p><br>
+
+          <a target="_blank" href="https://www.whatsapp.com/"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/whatsapp-white-icon.png" height="50px" alt=""></a>
+
+          <a target="_blank" href="https://www.facebook.com/"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png" height="50px" alt=""></a>
+
+          <a target="_blank" href="https://www.instagram.com/"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" height="50px"  alt=""></a>
+
+       <br> <br>
+       <div class="text-light">
+       <h6>&copy;ZekNim website</h6> 
+       </div>
+       
+      </div>
+      
+    </div>
+   </div>
+ </footer>                                       
+    
+          
+    
+    
+     
+    
+</body>
+
+</html>
